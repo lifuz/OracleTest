@@ -17,11 +17,21 @@ public class TestMain {
 		//获取数据库连接
 		Connection conn =  TestConnect.getConnection();
 		
-		String sql = "select * from emp";
-		PreparedStatement pt = conn.prepareStatement(sql);
-		ResultSet rs = pt.executeQuery();
+//		String sql = "select * from emp";
+//		PreparedStatement pt = conn.prepareStatement(sql);
+//		ResultSet rs = pt.executeQuery();
+//		
+//		while(rs.next()){
+//			System.out.println(rs.getString(2));
+//		}
 		
-		while(rs.next()){
+		String sql = "insert into dept values(50,'安卓','shanghai')";
+		PreparedStatement pt = conn.prepareStatement(sql);
+		pt.execute();
+		sql = "select * from dept";
+		pt = conn.prepareStatement(sql);
+		ResultSet rs = pt.executeQuery();
+		while(rs.next()) {
 			System.out.println(rs.getString(2));
 		}
 		

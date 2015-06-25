@@ -30,11 +30,11 @@ public class TestConnect {
 		//定义数据库的驱动类
 		driver = "oracle.jdbc.driver.OracleDriver";
 		//拼接访问的url
-		url = "jdbc:oracle:thin:@127.0.0.1:1521:orcl";
+		url = "jdbc:oracle:thin:@121.40.199.67:1521:orcl";
 		//设置用户名
 		user = "scott";
 		//设置密码
-		password = "lifuz";
+		password = "tiger";
 		//加载 驱动
 		Class.forName(driver);
 		
